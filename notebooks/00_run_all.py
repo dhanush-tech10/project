@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC # ShopStream — run the complete pipeline
 # MAGIC Import this folder with all sibling notebooks into Azure Databricks.

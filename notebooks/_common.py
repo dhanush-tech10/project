@@ -4,6 +4,7 @@
 # MAGIC Import this notebook beside the numbered notebooks. Run `00_run_all` for a complete execution.
 
 # COMMAND ----------
+
 import csv
 import hashlib
 import json
@@ -26,9 +27,9 @@ def parameter(name, default):
         return dbutils.widgets.get(name)
 
 
-CATALOG = parameter('catalog', 'wsadbnov')
-SCHEMA = parameter('schema', 'shopstream_dev')
-VOLUME = parameter('volume', 'shopstream_landing')
+CATALOG = parameter('catalog', 'workspace')
+SCHEMA = parameter('schema', 'training')
+VOLUME = parameter('volume', 'volume_data')
 SOURCE_PATH = parameter('source_path', '')
 RUN_ID = parameter('run_id', str(uuid.uuid4()))
 MAX_REJECT_RATE = float(parameter('max_reject_rate', '0.10'))
