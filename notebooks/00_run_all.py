@@ -23,10 +23,10 @@ def widget(name, default):
         return dbutils.widgets.get(name)
 
 args = {
-    'catalog':widget('catalog','workspace'),
-    'schema':widget('schema','training_dev'),
-    'volume':widget('volume','data'),
-    'source_path':widget('source_path','/Volumes/workspace/training/data'),
+    'catalog':widget('catalog','dhanush_prod'),
+    'schema':widget('schema','shopstream_prod'),
+    'volume':widget('volume','shopstream_landing'),
+    'source_path':widget('source_path','/Volumes/dhanush_prod/shopstream_prod/shopstream_landing/<data_folder>'),
     'max_reject_rate':widget('max_reject_rate','0.10'),
     'dirty_reject_rate':widget('dirty_reject_rate','0.65'),
     'run_id':str(uuid.uuid4()),

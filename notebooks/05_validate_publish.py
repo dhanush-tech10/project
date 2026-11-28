@@ -1,11 +1,19 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC # 05 â€” Reconcile and publish
 # MAGIC All marts resolve through one Delta publication pointer. A failed run leaves the prior publication active.
 # MAGIC Consumers needing a consistent multi-query session should pin the returned run ID.
+
 # COMMAND ----------
+
 # MAGIC %run ./_common
+
 # COMMAND ----------
+
 GOLD_TABLES = ['order_summary','daily_sales','product_sales','payment_reconciliation','inventory',
                'customer_current','customer_history','clickstream_daily','streaming_daily','regional_skew_sales','cleaned_daily_sales']
 

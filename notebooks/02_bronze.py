@@ -1,10 +1,18 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC # 02 — Bronze: unmodified values and source provenance
 # MAGIC One immutable raw snapshot per run; retries replace only their own run partition.
+
 # COMMAND ----------
+
 # MAGIC %run ./_common
+
 # COMMAND ----------
+
 def bronze():
     source = Path(manifest_root())
     contracts = json.loads((source / 'contracts.json').read_text(encoding='utf-8'))

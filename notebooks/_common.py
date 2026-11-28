@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC # ShopStream shared configuration and controls
 # MAGIC Import this notebook beside the numbered notebooks. Run `00_run_all` for a complete execution.
@@ -27,10 +31,10 @@ def parameter(name, default):
         return dbutils.widgets.get(name)
 
 
-CATALOG = parameter('catalog', 'workspace')
-SCHEMA = parameter('schema', 'training')
-VOLUME = parameter('volume', 'volume_data')
-SOURCE_PATH = parameter('source_path', '')
+CATALOG = parameter('catalog', 'dhanush_prod')
+SCHEMA = parameter('schema', 'shopstream_prod')
+VOLUME = parameter('volume', 'shopstream_landing')
+SOURCE_PATH = parameter('source_path', '/Workspace/Users/dhanushdhfm07@gmail.com/project/data')
 RUN_ID = parameter('run_id', str(uuid.uuid4()))
 MAX_REJECT_RATE = float(parameter('max_reject_rate', '0.10'))
 DIRTY_REJECT_RATE = float(parameter('dirty_reject_rate', '0.65'))

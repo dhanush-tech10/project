@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC # 01 — Preflight and immutable source landing
 # MAGIC Source must be the supplied dataset directory in Workspace Files or a Unity Catalog Volume.
